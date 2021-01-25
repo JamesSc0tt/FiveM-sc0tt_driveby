@@ -8,11 +8,11 @@ function lookingBehind()
 end
 
 Util.Tick(function()
-	if IsPedInAnyVehicle(sc0tt_driveby.ped) then
+	if IsPedInAnyVehicle(GetPlayerPed(-1)) then
 		local canshoot = true
 		if sc0tt_driveby.driver == false then
-			local veh = GetVehiclePedIsIn(sc0tt_driveby.ped,false)
-			if GetPedInVehicleSeat(veh, -1) == sc0tt_driveby.ped then
+			local veh = GetVehiclePedIsIn(GetPlayerPed(-1),false)
+			if GetPedInVehicleSeat(veh, -1) == GetPlayerPed(-1) then
 				canshoot = false -- no shooty shooty driver
 			end
 		end
